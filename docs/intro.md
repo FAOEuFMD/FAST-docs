@@ -2,46 +2,36 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Introduction
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Welcome to the EuFMD Technical Documentation.
 
-## Getting Started
+This documentation serves as a comprehensive guide to all EuFMD tools and dashboards, providing developers, system administrators, and other stakeholders with detailed information on how to effectively use, configure, and manage the tools built by the EuFMD.
 
-Get started by **creating a new site**.
+This documentation is a work in progress.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+Feel free to contribute over at [EuFMD FAST docs](https://github.com/FAOEuFMD/FAST-docs).
 
-### What you'll need
+## About DB Manager
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+## About Economic Impact of FAST Diseases
 
-## Generate a new site
+## About FAST REPORT
 
-Generate a new Docusaurus site using the **classic template**.
+## About Learning Path AI Recommender
 
-The classic template will automatically be added to your project after you run the command:
+## About Outputs & Milestones
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+An open-source dashboard that tracks the completion of yearly EuFMD Program Targets until the year 2027.
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+## About RMT
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+Risk Monitoring Tool
 
-## Start your site
+## About TOM
 
-Run the development server:
+TOM is a web-based Training Management System for veterinarians, developed for EuFMD/FAO. This app is a prototype built with Vue, Node/Express, Tailwind CSS & D3.
 
-```bash
-cd my-website
-npm run start
-```
+## About VADEMOS
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+VADEMOS is a stochastic risk analysis model to predict FMD vaccine numbers and an interactive user interface. The developed model was distributed with a web-based interactive interface built with R Shiny package. The tool is currently deployed with [Shinyapps.io](https://www.shinyapps.io), a cloud service for R products, with a free plan.
