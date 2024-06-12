@@ -19,23 +19,20 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme="dark"] {
-  --ifm-color-primary: #333333; /* Main primary color */
-  --ifm-color-primary-dark: #2b2b2b; /* Darker shade */
-  --ifm-color-primary-darker: #232323; /* Even darker */
-  --ifm-color-primary-darkest: #1b1b1b; /* Darkest shade */
-  --ifm-color-primary-light: #4d4d4d; /* Lighter shade */
-  --ifm-color-primary-lighter: #666666; /* Even lighter */
-  --ifm-color-primary-lightest: #808080; /* Lightest shade */
-  --ifm-code-font-size: 95%; /* Code font size */
-  --docusaurus-highlighted-code-line-bg: rgba(
-    255,
-    255,
-    255,
-    0.1
-  ); /* Highlight background for code lines */
-  --ifm-background-color: #121212; /* Dark background */
-  --ifm-background-color-darker: #0d0d0d; /* Darker background */
-  --ifm-color-text: #e0e0e0; /* Text color */
-  --ifm-color-text-light: #ffffff; /* Light text color */
-  --ifm-border-color: #333333; /* Border color */
+  --ifm-color-primary: var(--ifm-color-primary);
+  --ifm-color-primary-dark: var(--ifm-color-primary-dark);
+  --ifm-color-primary-darker: var(--ifm-color-primary-darker);
+  --ifm-color-primary-darkest: var(--ifm-color-primary-darkest);
+  --ifm-color-primary-light: var(--ifm-color-primary-light);
+  --ifm-color-primary-lighter: var(--ifm-color-primary-lighter);
+  --ifm-color-primary-lightest: var(--ifm-color-primary-lightest);
+  --ifm-code-font-size: var(--ifm-code-font-size);
+  --docusaurus-highlighted-code-line-bg: var(
+    --docusaurus-highlighted-code-line-bg
+  );
+  --ifm-background-color: var(--ifm-background-color);
+  --ifm-background-color-darker: var(--ifm-background-color-darker);
+  --ifm-color-text: var(--ifm-color-text);
+  --ifm-color-text-light: var(--ifm-color-text-light);
+  --ifm-border-color: var(--ifm-border-color);
 }
