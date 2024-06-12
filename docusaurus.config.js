@@ -77,7 +77,7 @@ const config = {
             position: "left",
             label: "Docs",
           },
-          { to: "/blog", label: "Tutorials", position: "left" },
+          // { to: "/blog", label: "Tutorials", position: "left" },
           {
             href: "https://github.com/FAOEuFMD/FAST-docs",
             label: "GitHub",
