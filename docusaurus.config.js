@@ -67,7 +67,7 @@ const config = {
         title: "",
         logo: {
           alt:
-            "Logo for the European Commission for the Control of Foot and Mouth Disease",
+            "Logo for the European Commission for the Control of Foot-and-Mouth Disease (EuFMD)",
           src: "img/eu-eufmd-fast-logo.png",
         },
         items: [
@@ -120,11 +120,11 @@ const config = {
             ],
           },
         ],
-        copyright: `MIT License, ${new Date().getFullYear()}. European Commission for the Control of Foot and Mouth Disease. Built with Docusaurus.`,
+        copyright: `MIT License, ${new Date().getFullYear()}. European Commission for the Control of Foot-and-Mouth Disease (EuFMD). Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
+        darkTheme: prismThemes.duotoneDark,
       },
     }),
 };
