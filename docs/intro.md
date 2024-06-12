@@ -40,7 +40,7 @@ RMT (Risk Monitoring Tool) is an interface that allows users to input data and o
 
 TOM is a web-based Training Management System for veterinarians, developed for EuFMD/FAO. This app is a prototype built with Vue, Node/Express, Tailwind CSS & D3.
 
-## Training Data Dashboard
+## About Training Data Dashboard
 
 A dashboard that allows users to visualize data.
 
