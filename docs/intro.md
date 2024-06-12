@@ -14,7 +14,11 @@ Feel free to contribute over at [EuFMD FAST docs](https://github.com/FAOEuFMD/FA
 
 ## About DB Manager
 
+A user interface that allows users to input and extract data.
+
 ## About Economic Impact of FAST Diseases
+
+A dashboard that allows user to visualise data.
 
 ## About FAST REPORT
 
@@ -24,13 +28,21 @@ Feel free to contribute over at [EuFMD FAST docs](https://github.com/FAOEuFMD/FA
 
 An open-source dashboard that tracks the completion of yearly EuFMD Program Targets until the year 2027.
 
+## About Recommender System
+
+A model that recommends learning pathways to country managers.
+
 ## About RMT
 
-Risk Monitoring Tool
+RMT (Risk Monitoring Tool) is an interface that allows users to input data and obtain risk scores.
 
 ## About TOM
 
 TOM is a web-based Training Management System for veterinarians, developed for EuFMD/FAO. This app is a prototype built with Vue, Node/Express, Tailwind CSS & D3.
+
+## Training Data Dashboard
+
+A dashboard that allows users to visualize data.
 
 ## About VADEMOS
 
