@@ -64,11 +64,11 @@ const config = {
       // Replace with your project's social card
       image: "img/eu-eufmd-fast-logo.png",
       navbar: {
-        title: "",
+        title: "EuFMD",
         logo: {
           alt:
             "Logo for the European Commission for the Control of Foot-and-Mouth Disease (EuFMD)",
-          src: "img/eu-eufmd-fast-logo.png",
+          src: "img/eufmd.jpeg",
         },
         items: [
           {
@@ -86,7 +86,7 @@ const config = {
         ],
       },
       footer: {
-        style: "dark",
+        style: "light",
         links: [
           {
             title: "Docs",
@@ -120,7 +120,7 @@ const config = {
             ],
           },
         ],
-        copyright: `MIT License, ${new Date().getFullYear()}. European Commission for the Control of Foot-and-Mouth Disease (EuFMD). Built with Docusaurus.`,
+        copyright: `MIT License, ${new Date().getFullYear()}. European Commission for the Control of Foot-and-Mouth Disease (EuFMD).`,
       },
       prism: {
         theme: prismThemes.github,
