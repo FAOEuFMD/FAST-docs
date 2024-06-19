@@ -27,9 +27,13 @@ DB_PASS=YOUR_PASSWORD
 
 Type `mysql -u root -p` in the terminal to access MySQL and type your password.
 
+:::tip
+
 It's possible you might need to update your authentication method for the root user in order to run the MySQL server. You can do this by running the below command from your terminal.
 
 `ALTER USER 'root' @ 'localhost' IDENTIFIED WITH mysql_native_password BY 'password';`
+
+:::
 
 In the MySQL terminaL, type `CREATE database TOM;` to create a database in MySQL.
 
