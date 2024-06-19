@@ -77,4 +77,4 @@ We use signed JSON Web Tokens (JWT) for user authorization, meaning that once th
 
 In order to use JWT add a super secret to your `.env` file.
 
-SUPER_SECRET=YOUR_SECRET
+`SUPER_SECRET=YOUR_SECRET`
