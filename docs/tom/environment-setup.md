@@ -35,6 +35,17 @@ In the MySQL terminaL, type `CREATE database TOM;` to create a database in MySQL
 
 Run `npm run migrate` in the project directory to create the tables and add data from a MySQL dump file located in `server/model` directory.
 
+In addition to our local database, we also have a second database hosted in Amazon Web Services (AWS) named `staging_db_tompilot`. You can think of this database as the "source of the truth", as it is regularly updated by our data science team. With that in mind, we want to try to make sure that the structure of our local database is the same as that of our `staging_db_tompilot` database to ensure that our frontend can support any new tables.
+
+To connect to our staging database add the following credentials to your `.env` file.
+
+```
+DB_HOST2="eufmd-database-1.cqodkl4vazie.eu-north-1.rds.amazonaws.com"
+DB_USER2=root
+DB_NAME2=staging_db_tompilot
+DB_PASS2=YOUR_PASSWORD
+```
+
 ## Frontend
 
 This project is built on the Vue.js framework, specifically Vue 3. For additional reading, see the migration docs [here](https://v3-migration.vuejs.org/).
@@ -59,3 +70,11 @@ You can use the Vetur extension in VSCode for formatting, linting and error-chec
 ```
 
 Then navigate to your client folder and run `npm run serve` to launch the app in the browser.
+
+## Authentication
+
+We use signed JSON Web Tokens (JWT) for user authorization, meaning that once the user is logged in, each subsequent request will include the JWT, allowing the user to access routes, services, and resources that are permitted with that token. For more information on how JSON Web Tokens work read more [here](https://jwt.io/introduction).
+
+In order to use JWT add a super secret to your `.env` file.
+
+SUPER_SECRET=YOUR_SECRET
