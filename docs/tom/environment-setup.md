@@ -39,9 +39,13 @@ In the MySQL terminaL, type `CREATE database TOM;` to create a database in MySQL
 
 Run `npm run migrate` in the project directory to create the tables and add data from a MySQL dump file located in `server/model` directory.
 
-In addition to our local database, we also have a second database hosted in Amazon Web Services (AWS) named `staging_db_tompilot`. You can think of this database as the "source of the truth", as it is regularly updated by our data science team. With that in mind, we want to try to make sure that the structure of our local database is the same as that of our `staging_db_tompilot` database to ensure that our frontend can support any new tables.
+In addition to our local database connection, we also have a second connection to several databases hosted in Amazon Web Services (AWS) named `staging_db_tompilot`. You can think of this connection as the "source of the truth", as the databases within it are regularly updated by our data science team.
 
-To connect to our staging database add the following credentials to your `.env` file.
+To facilitate efficient testing, it is recommended to maintain active connections to both the staging_db_tompilot and your local `tom_db`. This setup allows you to easily switch between the two environments as needed.
+
+For example, if a new table has been added and you're developing a feature that interacts with it, testing against the `staging_db_tompilot` would be beneficial. On the other hand, if your testing involves generating a large amount of dummy data, it is more practical to conduct these tests locally on `tom_db` to prevent cluttering the real database.
+
+To connect to our staging database, add the following credentials to your `.env` file. These credentials will also allow you to connect to the production database called `db_tompilot`.
 
 ```
 DB_HOST2="eufmd-database-1.cqodkl4vazie.eu-north-1.rds.amazonaws.com"
@@ -75,7 +79,7 @@ You can use the Vetur extension in VSCode for formatting, linting and error-chec
 
 Then navigate to your client folder and run `npm run serve` to launch the app in the browser.
 
-## Authentication
+### Authentication
 
 We use signed JSON Web Tokens (JWT) for user authorization, meaning that once the user is logged in, each subsequent request will include the JWT, allowing the user to access routes, services, and resources that are permitted with that token. For more information on how JSON Web Tokens work read more [here](https://jwt.io/introduction).
 
