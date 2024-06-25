@@ -14,4 +14,4 @@ How do we run the project locally?
 
 ## Frontend
 
-## Authentication
+### Authentication
