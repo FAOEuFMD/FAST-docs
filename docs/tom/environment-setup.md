@@ -6,6 +6,14 @@ sidebar_position: 3
 
 How do we run the project locally?
 
+## Dependencies
+
+Run `npm install` on the root folder to install dependencies related to Express.
+
+`cd client` and run `npm install` to install dependencies related to Vue.
+
+The CLI Service `(@vue/cli-service)` is a development dependency. It's an npm package installed locally into every project created by @vue/cli. Therefore, you will need to run `npm install @vue/cli-service --save-dev` to access the Vue CLI from your terminal.
+
 ## Backend
 
 ### Server
