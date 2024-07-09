@@ -6,7 +6,7 @@ authors:
   title: Software Engineer @ EuFMD
   url: https://github.com/sssoja
   image_url: https://github.com/sssoja.png
-tags: [pilots, process, devOps, TOM]
+tags: [pilots, process, devops, tom]
 ---
 
 TOM is being piloted in a number of countries including Spain, Bulgaria and Switzerland.
