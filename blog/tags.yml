@@ -14,3 +14,39 @@ hola:
   label: Hola
   permalink: /hola
   description: Hola tag description
+data:
+  label: Data
+  permalink: /data
+  description: Data tag description
+frontend:
+  label: Frontend
+  permalink: /frontend
+  description: Frontend tag description
+mysql:
+  label: MySQL
+  permalink: /mysql
+  description: MySQL tag description
+api:
+  label: API
+  permalink: /api
+  description: API tag description
+react:
+  label: React
+  permalink: /react
+  description: React tag description
+pilots:
+  label: Pilots
+  permalink: /pilots
+  description: Pilots tag description
+process:
+  label: Process
+  permalink: /process
+  description: Process tag description
+tom:
+  label: TOM
+  permalink: /tom
+  description: TOM tag description
+devops:
+  label: DevOps
+  permalink: /devOps
+  description: DevOps tag description
