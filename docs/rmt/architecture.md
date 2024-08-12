@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Architecture Overview
+# Architecture
 
 What is the app built on?
 
