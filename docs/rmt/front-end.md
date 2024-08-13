@@ -46,6 +46,7 @@ Pinia allows you to store data and methods (aka variables and functions) in a ce
 #### When to use it?
 
 ✅ Use Pinia to store any data and methods that need to be accessible across multiple components. Ex:
+
 - `receiverCountry` needs to be set in `CountrySelect.vue`, but displayed in `RmtCarousel.vue`
 - `CountrySelect.vue` needs to fetch disease status scores (when a new source country is selected), but `DiseaseStatus.vue` needs to display, edit or remove them.
 - `diseaseStatus` and `mitigationMeasures` scores are rendered in the corresponding components, but are also used to calculate risk results.
@@ -74,23 +75,23 @@ import api from "@/services/rmt-api.js";
 
 // ******* STEP 2: export your store, and after defineStore, give your store a unique descriptive name *******
 export const useDiseaseStatusStore = defineStore("diseaseStatus", {
-// ******* STEP 3: define your data/variables in state *******
-state: () => ({
+  // ******* STEP 3: define your data/variables in state *******
+  state: () => ({
     diseaseStatus: [],
-}),
+  }),
 
-// ******* STEP 4: define your functions/methods in actions *******
-actions: {
+  // ******* STEP 4: define your functions/methods in actions *******
+  actions: {
     async getDiseaseStatus(country_id, country_name) {
-    // code to fetch disease status scores...
+      // code to fetch disease status scores...
     },
     editDiseaseStatus(newScores) {
-    // code to edit disease status scores...
+      // code to edit disease status scores...
     },
     removeDiseaseStatus(country) {
-    // code to remove disease status scores...
+      // code to remove disease status scores...
     },
-},
+  },
 });
 
 // ******* THAT'S IT! Congrats :) *******
@@ -101,53 +102,62 @@ actions: {
 Here’s a 🎬 [how-to video](https://vueschool.io/lessons/access-pinia-state-in-the-options-api)
 
 Process to use stored data or methods in any component is:
-    1. In `<script>`, import:
-      a. the correct store
-      b. `mapState` if you’re using data/variables
-      c. `mapActions` if you’re using functions/methods
 
-         ```js
-         import { useExampleStore } from '@/stores/useExampleStore'
-         import { mapState, mapActions } from 'pinia';
-         ```
+1. In `<script>`, import:
+   1. the correct store
+   2. `mapState` if you’re using data/variables
+   3. `mapActions` if you’re using functions/methods
 
-      2. For data/variables, add a `computed` property in your `<script>`, and use `mapState` to destructure your stored data:
+```js
+import { useExampleStore } from "@/stores/useExampleStore";
+import { mapState, mapActions } from "pinia";
+```
 
-         ```
-         computed: {
-                 ...mapState(useExampleStore, ['myVariable', 'anotherVariable'])
-                 },
+2.  For data/variables, add a `computed` property in your `<script>`, and use `mapState` to destructure your stored data:
 
-         // here's a real example with countries store:
-         computed: {
-                 ...mapState(useCountriesStore, ['countryList', 'regionList', 'sourceCountries']),
-         				},
-         ```
+```js
+computed: {
+    ...mapState(useExampleStore, ['myVariable', 'anotherVariable'])
+        },
 
-      3. For functions/methods, use `mapActions` in your `methods` to destructure the stored functions. You do not need to include params, just function names:
+// here's a real example with countries store:
+computed: {
+    ...mapState(useCountriesStore, ['countryList', 'regionList', 'sourceCountries']),
+    },
+```
 
-         ```
-         methods: {
-                 ...mapActions(useExampleStore, ['myFunction', 'anotherFunction'])
-                 },
+3. For functions/methods, use `mapActions` in your `methods` to destructure the stored functions. You do not need to include params, just function names:
 
-         // here's a real example with countries store:
-         methods: {
-                 ...mapActions(useCountriesStore, ['getCountries', 'getRegions', 'updateSourceCountries'])
-                 },
-         ```
+```js
+methods: {
+        ...mapActions(useExampleStore, ['myFunction', 'anotherFunction'])
+        },
 
-      4. Then you can use as usual! i.e. Use the variables in your `<template>`, call the functions, etc., with the same syntax as if they were standard `data` or `methods`. Store data and methods are **bolded and highlighted** in the example below:
+// here's a real example with countries store:
+methods: {
+        ...mapActions(useCountriesStore, ['getCountries', 'getRegions', 'updateSourceCountries'])
+        },
+```
 
-         ```
-         <!-- source country select -->
-         <div>
-         	<select v-model="selectedSourceCountry" name="**sourceCountries**" @change="**updateSourceCountries(value)**">
-         		<option key=0 value="">Select source countries...</option>
-         		<option key=1 value="all">All {{ selectedRegion }}</option>
-         		<option v-for="c in filteredCountries" :key="c.iso3" :value="c">{{ c.name_un }}</option>
-         	</select>
-         </div>
-         ```
-- _Sources_
-  - [Vue Style Guide](https://vuejs.org/style-guide)
+4. Then you can use as usual! i.e. Use the variables in your `<template>`, call the functions, etc., with the same syntax as if they were standard `data` or `methods`. Store data and methods are **sourceCountries** and **updateSourceCountries()** in the example below:
+
+```html
+<!-- source country select -->
+<div>
+  <select
+    v-model="selectedSourceCountry"
+    name="sourceCountries"
+    @change="updateSourceCountries(value)"
+  >
+    <option key="0" value="">Select source countries...</option>
+    <option key="1" value="all">All {{ selectedRegion }}</option>
+    <option v-for="c in filteredCountries" :key="c.iso3" :value="c">
+      {{ c.name_un }}
+    </option>
+  </select>
+</div>
+```
+
+### Sources
+
+- [Vue Style Guide](https://vuejs.org/style-guide)
