@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# Environment setup and deployment
+# Setup and deployment
 
 The Risk Monitoring Tool is a feature built on EUFMD's DB Manager.
 

@@ -15,9 +15,9 @@ sidebar_position: 3
 ### Vue API
 
 - Use Vue Options API
-  - There is also the new Composition API, but we all learned Options format.
+  - There is also the new Composition API, but the original dev team was more familiar with Options format.
   - If looking up documentation, make sure the “Options” format is selected:
-    ![Screen Shot 2024-05-08 at 11.05.30 AM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/cb6a297b-0172-4571-88ae-6aa73ffd2f5f/d18ec2fc-906e-46c3-8d9f-cd33ff539362/Screen_Shot_2024-05-08_at_11.05.30_AM.png)
+    ![screenshot of Vue website with Options API selected](/img/vue-options.png)
 
 ### Naming conventions
 
@@ -26,20 +26,20 @@ sidebar_position: 3
 - component names should be:
   - in `PascalCase`
   - always multi-word: i.e.
-    - ❌ `~~Connections.vue~~`
+    - ❌ ~~`Connections.vue`~~
     - ✅ `ConnectionsTable.vue`
-  - when components are used by only one parent: prepended with their parent name, i.e. if a Form has components Question and Answers:
-    - ❌ `~~Question.vue`, `Answers.vue`~~
+  - when components are used by only one parent: prepend with their parent name, i.e. if a Form has components Question and Answers:
+    - ❌ ~~`Question.vue`~~, ~~`Answers.vue`~~
     - ✅ `FormQuestion.vue`, `FormAnswers.vue`
     - This ensures that related components are visually grouped together in the file structure.
-  - when components are reused throughout the app: prepended with `RMT`. For example, if we reuse the same `Button`:
-    - ❌ `~~Button.vue~~`
+  - when components are reused throughout the app: prepend with `RMT`. For example, if we reuse the same `Button`:
+    - ❌ ~~`Button.vue`~~
     - ✅ `RMTButton.vue`
     - This ensures that reusable components are visually grouped together in the file structure
 
-### Pinia for state management 🍍
+### Pinia for state management
 
-#### What is it?
+#### 🍍 What is it? 🍍
 
 Pinia allows you to store data and methods (aka variables and functions) in a central way, and import them to different components throughout your app. This can simplify your code by importing and using variables and functions _only_ in the components where they are needed, and eliminates the need for prop drilling and several layers of callback functions.
 
@@ -59,7 +59,7 @@ Pinia allows you to store data and methods (aka variables and functions) in a ce
 
 _Here is the [documentation](https://pinia.vuejs.org/core-concepts/) if you’d like further details. 📖_
 
-#### Create a store 🏗️
+##### Create a store 🏗️
 
 First, create your store file and name it with this pattern: `useExampleStore.js`
 
@@ -97,7 +97,7 @@ export const useDiseaseStatusStore = defineStore("diseaseStatus", {
 // ******* THAT'S IT! Congrats :) *******
 ```
 
-#### Use a store 🧤
+##### Use a store 🧤
 
 Here’s a 🎬 [how-to video](https://vueschool.io/lessons/access-pinia-state-in-the-options-api)
 
