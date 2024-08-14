@@ -11,6 +11,8 @@ RMT shares a database with our parent app, DB Manager. Please [look there](/docs
 
 ## Architecture
 
+RMT shares a codebase with our parent app, DB Manager. Please [look there](/docs/db-manager/architecture) for full documentation on back-end architecture. Within this environment, RMT uses:
+
 ```jsx
 /src
 ├── controllers
@@ -24,51 +26,71 @@ RMT shares a database with our parent app, DB Manager. Please [look there](/docs
 └── app.js
 ```
 
-- **Controllers**: logic that handles requests and responses. Each file should focus on a specific resource or functionality.
+### Controllers
 
-  ```jsx
-  // controllers/userController.js
-  const getUser = (req, res) => {
-    // Logic to fetch user data
-  };
+Logic that handles requests and responses. Each file should focus on a specific resource or functionality.
 
-  module.exports = {
-    getUser,
-  };
-  ```
+```jsx
+// controllers/userController.js
+const getUser = (req, res) => {
+  // Logic to fetch user data
+};
 
-- **Models**: database schemas, models and helpers.
-- **Routes**: API endpoints and their associated controller methods.
+module.exports = {
+  getUser,
+};
+```
 
-  ```jsx
-  // routes/userRoutes.js
-  const express = require("express");
-  const userController = require("../controllers/userController");
+### Models
 
-  const router = express.Router();
+Database schemas, models and helpers.
 
-  router.get("/users", userController.getUser);
+### Routes
 
-  module.exports = router;
-  ```
+API endpoints and their associated controller methods.
 
-- **Services**: complex business logic that isn’t directly tied to a specific endpoint.
+```jsx
+// routes/userRoutes.js
+const express = require("express");
+const userController = require("../controllers/userController");
 
-  ```jsx
-  // services/authService.js
-  const generateToken = (user) => {
-    // Logic to generate a JWT token
-  };
+const router = express.Router();
 
-  module.exports = {
-    generateToken,
-  };
-  ```
+router.get("/users", userController.getUser);
 
-- **Middleware**: authentication, validation and error handling.
-- **Utils**: utility functions that can be reused across the application (p.e. formatDate).
-- **Config**: environment variables, database configurations…
-- **Tests**: unit and integration tests.
+module.exports = router;
+```
+
+### Services
+
+Complex business logic that isn’t directly tied to a specific endpoint.
+
+```jsx
+// services/authService.js
+const generateToken = (user) => {
+  // Logic to generate a JWT token
+};
+
+module.exports = {
+  generateToken,
+};
+```
+
+### Middleware
+
+Authentication, validation and error handling.
+
+### Utils
+
+Utility functions that can be reused across the application (p.e. formatDate).
+
+### Config
+
+Environment variables, database configurations…
+
+### Tests
+
+Unit and integration tests.
 
 ## API
 

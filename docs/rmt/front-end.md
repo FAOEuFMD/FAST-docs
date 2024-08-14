@@ -4,9 +4,40 @@ sidebar_position: 3
 
 # Front end
 
-## Overview
-
 ## Architecture
+
+RMT shares a codebase with our parent app, DB Manager. Please [look there](/docs/db-manager/architecture) for full documentation on front-end architecture. Within this environment, RMT uses:
+
+```jsx
+/src
+├── components
+├── services
+├── stores
+├── views
+```
+
+### Components
+
+Discrete visual elements that are arranged within a view. Some of these may be re-used throughout the app.
+
+### Services
+
+Helper functions that handle requests and responses.
+
+```js
+├── rmt-api
+├── rmtOperations
+      ├── caclulateConnectionScoresPerPathway
+      ├── caclulateRiskPerDisease
+      ├── caclulateRiskScores
+```
+
+- `rmt-api` handles requests to the [back-end](/docs/rmt/back-end.md) API
+- `rmtOperations` handle complex logic to calulate risk scores. This is the same logic as calculating risk scores on the back-end. But for now, it will remain a front-end operation.
+
+### Stores
+
+### Views
 
 ## User flow
 
