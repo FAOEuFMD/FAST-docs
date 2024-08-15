@@ -37,9 +37,26 @@ Helper functions that handle requests and responses.
 
 ### Stores
 
+Pinia stores that hold state (data, functions etc.) that will be shared among multiple components. See "Pinia for State Management" section below for more information.
+
 ### Views
 
+Components that hold an entire page view (containing multiple sub-components).
+Our only 3 views are:
+
+```js
+├── RMT
+├── RMTLanding
+├── RMTResults
+```
+
+- RMTLanding is the landing page for the tool, including background information and a start button.
+- RMT contains the actual tool, including: country selection, data tables and their keys, and navigation buttons.
+- RMTResults contains the risk score results, including: results data table and key, data visualizations, and an option to download.
+
 ## User flow
+
+![user flow diagram](/img/rmt-userflow.png)
 
 ## Style guide
 
