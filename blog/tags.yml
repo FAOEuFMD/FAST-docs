@@ -50,3 +50,19 @@ devops:
   label: DevOps
   permalink: /devOps
   description: DevOps tag description
+testing:
+  label: Testing
+  permalink: /testing
+  description: Testing tag description
+database:
+  label: Database
+  permalink: /database
+  description: Database tag description
+fake:
+  label: Fake
+  permalink: /fake
+  description: Fake tag description
+dump:
+  label: Dump
+  permalink: /dump
+  description: Dump tag description
