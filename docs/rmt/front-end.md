@@ -58,6 +58,32 @@ Our only 3 views are:
 
 ![user flow diagram](/img/rmt-userflow.png)
 
+The user:
+
+1. Views a description about RMT.
+2. Clicks to enter the tool.
+3. Selects their receiver country and source countries.
+4. Views disease status data for source countries. If the user would like to edit, they:
+   i. Click a button to make scores editable.
+   ii. Edit scores.
+   iii. Save scores.
+5. Click "Next" to view mitigation measures data for source countries. If the user would like to edit, they:
+   i. Click a button to make scores editable.
+   ii. Edit scores.
+   iii. Save scores.
+6. Click "Next" to view pathways data. This is not editable.
+7. Click "Next" to reach connections data entry.
+8. Must enter connections data for each country, for each field. To do so, they:
+   i. Click a button to make scores editable.
+   ii. Enter scores.
+   iii. Save scores.
+9. Click "Calculate results" to calculate and view risk score results.
+10. On the risk score Results view, user may:
+    i. View the risk scores results as a table of data.
+    ii. View data visualizations of the results.
+    iii. Click to download an Excel of the data.
+    iv. Click to download a PDF of the data. This will open a new tab which automatically downloads the PDF.
+
 ## Style guide
 
 ### Vue API
