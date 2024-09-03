@@ -51,3 +51,40 @@ Please review the following resources to understand more about EuFMD's Risk Moni
 - [Instructions for using RMT](https://drive.google.com/file/d/1ZDEqD-x_SH-2DYOJ830dsCZfwlFpDxmZ/view?usp=drive_link)
 - [Summary description](https://drive.google.com/file/d/1WgH70XSs3QNReq6NMMzq2wQrGel7buKO/view?usp=drive_link)
 - [Possible applications](https://drive.google.com/file/d/1gklD0nJsFrvoCX-aFir7xgmpeygMcgNd/view?usp=drive_link)
+
+## Future Features
+
+### Development team's wishlist / known bugs:
+
+Bugs:
+
+1. Make it mandatory to select a receiver country before moving past disease status page in the slider. (Currently, you can go through the entire flow and view results without selecting a receiver country.)
+2. PDF download:
+   i. It would be best to download the PDF of all information directly from the Results page. Currently, it opens a new page with all data combined, and triggers the download from there.
+   ii. Some unneeded elements are captured in the PDF download (like "Edit" buttons, and the RMTDownload component in the Results page). It would be ideal to filter these out so only relevant content is included in the PDF.
+   iii. Fix alignment and padding in table data. Currently, numbers and text are partially cut off.
+
+Features:
+
+1. Implement thorough unit tests for front and back end.
+2. Create a navbar / progress bar to show which step o the process the user is currently on.
+
+Refactoring:
+
+1. Adapt backend code to protect against SQL injection attacks.
+2. Create custom-formatted modals for `alert` and `confirm` messages. Currently they are just the default. ("Localhost says:...").
+3. Build correct error message rendering.
+4. Refactor code to be more portable (aligned with EEuFMD Engineering Guidelines).
+
+## Feedback / wishlist from EUFMD RMT team:
+
+1. Second area selector can be taken out.
+2. Select countries should be able to write/seach and to be shown as it is now (when you write a country you see all the ones in the same area and the option 'all of that area'
+3. If we do not have data for a country it should come as blank (data is not provided) at the moment is coming 0 in green which is like saying the country is perfect which is data that we do not know
+4. One should be able to add an empty row and able to write a region of a country or wathever they want in text
+5. reset button to default values on all editable tables
+6. A date on when the data was updated should be displayed somewhere 'Data was updated as per ...'
+7. Connections if not filling all and pressing continue has a message that you can´t continue, would be great if that message said 'There are some cells with no information would you like to put them as 0 and continue?" so non writen would be taken as 0
+8. Results page they have decided to remove the info right table
+9. Add map to visualization of results
+10. All text is being revised and and updated doc will be shared to edit all.
