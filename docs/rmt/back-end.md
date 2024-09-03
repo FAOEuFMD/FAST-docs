@@ -9,6 +9,24 @@ sidebar_position: 4
 RMT shares a database with our parent app, DB Manager. Please [look there](/docs/db-manager/architecture) for full documentation. From the DB Manager database, RMT uses these tables:
 ![database schema showing 4 connected database tables: countries, disease_status, mitigation_measures, and risk_scores](/img/rmt-db-tables.png)
 
+## Testing
+
+If you'd like to test routes in Postman, you will first need to "log in". To do this:
+
+1. `POST localhost:5800/api/auth/login` with `req. body` in this format (ask the team for the admin login info):
+
+```js
+{
+    "email": "string",
+    "password": "string"
+}
+
+```
+
+2. Copy the token
+3. Open the headers tab and write at the key cell **x-access-token** and paste the token at the value cell.
+4. Now you can use other endpoints that require authorisation.
+
 ## Architecture
 
 RMT shares a codebase with our parent app, DB Manager. Please [look there](/docs/db-manager/architecture) for full documentation on back-end architecture. Within this environment, RMT uses:
@@ -133,6 +151,8 @@ diseaseStatus & mitigationMeasures object format:
 ```
 
 ## Style guide
+
+Follow [EUFMD's Engineering Guidelines](https://boom-citrine-667.notion.site/Engineering-Guidelines-eda49169e2044e488a6acb1735704726). In addition to those, we do the following:
 
 ### Endpoints
 

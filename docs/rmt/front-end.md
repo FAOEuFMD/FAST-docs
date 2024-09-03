@@ -86,6 +86,8 @@ The user:
 
 ## Style guide
 
+Follow [EUFMD's Engineering Guidelines](https://boom-citrine-667.notion.site/Engineering-Guidelines-eda49169e2044e488a6acb1735704726). In addition to those, we do the following:
+
 ### Vue API
 
 - Use Vue Options API
