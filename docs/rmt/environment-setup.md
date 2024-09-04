@@ -1,17 +1,11 @@
 ---
-sidebar_position: 3
+sidebar_position: 5
 ---
 
-# Environment setup
+# Setup and deployment
 
-How do we run the project locally?
+The Risk Monitoring Tool is a feature built on EUFMD's DB Manager.
 
-## Backend
+See [DB Manager docs](/docs/category/db-manager) for instructions on [environment setup](/docs/db-manager/environment-setup) and [deployment](/docs/db-manager/environment-setup).
 
-### Server
-
-### Database prep
-
-## Frontend
-
-### Authentication
+Contact project organizers for login and access information.
