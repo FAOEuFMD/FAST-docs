@@ -56,7 +56,7 @@ to your excel geo-enabled data
 **LEAFLET**
 
 ***Using Leaflet, copy the sample code below in text editor and save it 
-as html file, note the URL for the service is highlighted in red:***
+as html file, or use the url as below:***
 
 ```run<html>
 <head >
