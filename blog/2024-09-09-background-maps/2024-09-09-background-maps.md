@@ -13,7 +13,7 @@ tags: [maps, geodata, background maps]
 
 #### Introduction
 
-Whether you’re using Tableau, Power BI, Python, R, Leaflet, or any other tool or programming language in your web application at EuFMD and as a division of FAO/UN we have very specific guidelines on borders and naming conventions. Thankfully the geospatial unit at UN has provided a WSM ( a wsm/wsmt is a .... ) for applications to use. In addition all maps must display the disclaimers.
+Whether you’re using Tableau, Power BI, Python, R, Leaflet, or any other tool or programming language in your web application at EuFMD and as a division of FAO/UN we have very specific guidelines on borders and naming conventions. Thankfully the geospatial unit at UN has provided a WSM ( a wsm/wsmt is a .... ) for applications to use. In addition all maps must display the disclaimer, best shown at the bottom of the map.
 
 **DISCLAIMERS**
 
