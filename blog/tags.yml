@@ -66,3 +66,35 @@ dump:
   label: Dump
   permalink: /dump
   description: Dump tag description
+maps:
+  label: Maps
+  permalink: /maps
+  description: Maps tag description
+geodata:
+  label: Geodata
+  permalink: /geodata
+  description: Geodata tag description
+bakground maps:
+  label: Backgrond Maps
+  permalink: /background maps
+  description: Background maps tag description
+aws:
+  label: AWS
+  permalink: /aws
+  description: AWS tag description
+automate:
+  label: Automate
+  permalink: /automate
+  description: Automate tag description
+lambda:
+  label: Lambda
+  permalink: /lambda
+  description: Lambda tag description
+python script:
+  label: Python Script
+  permalink: /python script
+  description: Python Script tag description      
+
+
+
+
