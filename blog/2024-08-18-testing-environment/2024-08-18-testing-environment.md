@@ -22,7 +22,8 @@ Here's a step-by-step guide on how you can achieve this:
 **Option A: Using DBeaver**
 
 1.  Open DBeaver and connect to the database you want to export.
-2.  Right-click on the database name
+2.  From the Databases list, right-click on the database you want
+    to dump.
 3.  Select `Tools` > `Dump Database`. This will open the database dump configuration window.
 4.  Select the tables you want to export by checking the boxes next to them.
 5.  Choose the output folder where you want the SQL file to be saved and a name for the file.
