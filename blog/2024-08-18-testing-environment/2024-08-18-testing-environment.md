@@ -24,9 +24,10 @@ Here's a step-by-step guide on how you can achieve this:
 1.  Open DBeaver and connect to the database you want to export.
 2.  From the list in `Databases`, right-click on the database you want to dump.
 3.  Select `Tools` > `Dump Database`. This will open the database dump configuration window.
-4.  Select the tables you want to export by checking the boxes next to them.
-5.  Choose the output folder where you want the SQL file to be saved and a name for the file.
-6.  Start the dump process. The SQL file (e.g. `dump-db_manager-202408081154.sql`) will be saved in the location you specified.
+4.  Select the specific database with the tables you want to export by checking the boxes next to them.
+5.  Choose the output folder where you want the SQL file to be saved, a name for the file (File name pattern field) and click START.
+6.  Start the dump process. The SQL file with the name you gave it will be saved in the location you specified.
+7.  When the MySQL dump progress is over (you´ll get a message like : "Task 'MySQL dump' finished at Fri Sep 27 17:42:02 CEST 2024"), close the configuration window manually and confirm that the file exists in the desired location.
 
 **Option B: Using the Terminal**
 
