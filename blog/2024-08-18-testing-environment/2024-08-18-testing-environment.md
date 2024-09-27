@@ -31,7 +31,8 @@ Here's a step-by-step guide on how you can achieve this:
 **Option B: Using the Terminal**
 
 1.  Open your terminal.
-2.  Run the following command:
+2.  Use the `cd` command to navigate into your project folder
+3.  Run the following command:
 
 ```bash
 mysqldump -u root -p the_database_name > database_dump_name.sql
@@ -39,7 +40,7 @@ mysqldump -u root -p the_database_name > database_dump_name.sql
 // Replace "the_database_name" with the name of the database you want to dump and "database_dump_name" with the desired name for your dump file.
 ```
 
-3.  This will create an SQL file (`database_dump_name.sql`) in the current directory. This file contains all the SQL commands necessary to recreate the original database, including its structure and data.
+4.  This will create an SQL file (`database_dump_name.sql`) in the current directory. This file contains all the SQL commands necessary to recreate the original database, including its structure and data.
 
 **II. Import the Dump into a Local Database:**
 
