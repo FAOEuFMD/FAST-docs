@@ -35,13 +35,16 @@ Here's a step-by-step guide on how you can achieve this:
 2.  Use the `cd` command to navigate into your project folder
 3.  Run the following command:
 
-```bash
+```sql
 mysqldump -u root -p the_database_name > database_dump_name.sql
 
-// Replace "the_database_name" with the name of the database you want to dump and "database_dump_name" with the desired name for your dump file.
+/*
+Replace "the_database_name" with the name of the database you chose to dump,
+and "database_dump_name" with the desired name for your dump file.
+*/
 ```
 
-4.  This will create an SQL file (`database_dump_name.sql`) in the current directory. This file contains all the SQL commands necessary to recreate the original database, including its structure and data.
+4.  This will create an SQL file (e.g. above we used `database_dump_name.sql`) in the root directory where the core files of your project are stored. This file contains all the SQL commands necessary to recreate the original database, including its structure and data.
 
 **II. Import the Dump into a Local Database:**
 
@@ -51,10 +54,13 @@ mysqldump -u root -p the_database_name > database_dump_name.sql
 - Log in to MySQL with the command: `mysql -u root -p`
 - Create a new database by running:
 
-```bash
+```sql
   CREATE DATABASE local_database_dump_name;
 
-  // "local_database_dump_name": This is the name you assign to the new local database where you will import the dump. You can choose any name you prefer for this database.
+  /*
+"local_database_dump_name": This is the name you assign to the new local database where you will import the dump,
+and it will appear in your MySQL databases. You can choose any name you prefer for this database.
+*/
 ```
 
 - Exit the MySQL client by typing: `EXIT;`
