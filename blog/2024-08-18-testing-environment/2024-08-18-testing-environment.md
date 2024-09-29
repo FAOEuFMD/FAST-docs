@@ -57,8 +57,7 @@ Replace `the_database_name` with the name of the database you want to dump, and 
   CREATE DATABASE local_database_dump_name;
 
   /*
-"local_database_dump_name": This is the name you assign to the new local database where you will import the dump,
-and it will appear in your MySQL databases. You can choose any name you prefer for this database.
+Replace `local_database_dump_name` with the name you want to assign to the new database. This name will appear in your MySQL databases, and you can choose any name you prefer.
 */
 ```
 
