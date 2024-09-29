@@ -121,17 +121,26 @@ The `.env` file is a local configuration file used to store environment variable
 
 When pushing your branch to GitHub, you **don’t** need to modify the .env file, as it is ignored by Git.
 
+When connecting to the dump database, ensure that the database connection in your .env file is configured with the correct settings. For the dump database, the `.env` file should be modified as follows:
+
+```bash
+DB_HOST=localhost
+DB_NAME=local_database_dump_name;
+DB_PASS=YOUR_MySQL_PASSWORD
+```
+
 **Switching Between Databases in DBeaver**
 
-To facilitate switching between the original database and the dump database in DBeaver, ensure that each database connection in your .env file is configured with the correct settings. You should have separate settings for each connection (e.g., one for the original database and one for the local dump database).
+To switch between the original database and the dump database in DBeaver, you can maintain separate settings for each connection (e.g., one for the original database and one for the local dump database).
 
-You can comment out the settings for the database you're not currently using by adding # at the beginning of those lines.
-If you need to revert to using the original database:
+Comment out the settings for the database you're not using by adding # at the beginning of those lines.
+
+If you need to revert to the original database:
 
 1. Disconnect from the current database in DBeaver.
 2. Connect to the original database in DBeaver.
 3. Open the .env file and uncomment the relevant settings for the original AWS connection (remember to comment out the dump database settings).
 
-Before you start testing your connection and code, ensure that you are connected to the correct database and not to both databases simultaneously. Look for a green tick mark next to the database name in DBeaver to confirm that the connection is established successfully.
+Before testing your connection and running your code, confirm that you're connected to the correct database. Look for the green tick mark next to the database name in DBeaver to ensure the connection is active and correct.
 
 ---
