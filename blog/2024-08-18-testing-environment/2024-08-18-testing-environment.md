@@ -25,7 +25,7 @@ Here's a step-by-step guide on how you can achieve this:
 2.  From the list in `Databases`, right-click on the database you want to dump.
 3.  Go to `Tools` > `Dump Database`. This will open the database dump configuration window.
 4.  Select the specific database that contains the tables you want to export. Check the boxes next to the tables you wish to include in the export.
-5.  Choose the output folder where you want the SQL file to be saved. Enter a name for the file in the File Name Pattern field (e.g. `DBeaver_export_dump.sql`).
+5.  Choose the output folder where you want the SQL file to be saved and enter a name for the file in the File Name Pattern field (e.g. `DBeaver_export_dump.sql`).
 6.  Click START to begin the dump process. The SQL file will be saved with the name you provided in the specified location.
 7.  When the MySQL dump progress is over (you´ll get a message like : "Task 'MySQL dump' finished at Fri Sep 27 17:42:02 CEST 2024"), close the configuration window manually and confirm that the file exists in the desired location.
 
@@ -105,7 +105,7 @@ Password: YOUR_MySQL_PASSWORD;
 
 ```js
 /*
-Replace "YOUR_MySQL_PASSWORD" with your actual MySQL password. You can choose whether to save your password for future connections.
+Replace `YOUR_MySQL_PASSWORD` with your actual MySQL password. You can choose whether to save your password for future connections.
 
 */
 ```
@@ -113,7 +113,7 @@ Replace "YOUR_MySQL_PASSWORD" with your actual MySQL password. You can choose wh
 5. Click `Test Connection` to ensure everything is set up correctly.
 6. Click `Finish` to save the connection.
 
-(Note: Port 3306 is the default port for MySQL)
+Note: Port 3306 is the default port for MySQL.
 
 ### **The `.env` File**
 
@@ -121,15 +121,16 @@ The `.env` file is a local configuration file used to store environment variable
 
 When pushing your branch to GitHub, you **don’t** need to modify the .env file, as it is ignored by Git.
 
-**Switching connections**
+**Switching Between Databases in DBeaver**
 
-To facilitate switching between the original database and the dump database in DBeaver, ensure that your .env file contains two sets of settings—one for each connection. You can comment out the settings for the database you are not using by adding # at the beginning of those lines.
+To facilitate switching between the original database and the dump database in DBeaver, ensure that each database connection in your .env file is configured with the correct settings. You should have separate settings for each connection (e.g., one for the original database and one for the local dump database).
 
+You can comment out the settings for the database you're not currently using by adding # at the beginning of those lines.
 If you need to revert to using the original database:
 
 1. Disconnect from the current database in DBeaver.
 2. Connect to the original database in DBeaver.
-3. Open the .env file and uncomment the relevant settings for the AWS connection (remember to comment out any settings that you are no longer using).
+3. Open the .env file and uncomment the relevant settings for the original AWS connection (remember to comment out the dump database settings).
 
 Before you start testing your connection and code, ensure that you are connected to the correct database and not to both databases simultaneously. Look for a green tick mark next to the database name in DBeaver to confirm that the connection is established successfully.
 
