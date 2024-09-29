@@ -23,10 +23,10 @@ Here's a step-by-step guide on how you can achieve this:
 
 1.  Open DBeaver and connect to the database you want to export.
 2.  From the list in `Databases`, right-click on the database you want to dump.
-3.  Select `Tools` > `Dump Database`. This will open the database dump configuration window.
-4.  Select the specific database with the tables you want to export by checking the boxes next to them.
-5.  Choose the output folder where you want the SQL file to be saved and a name for it in the File name pattern (e.g. `DBeaver_export_dump.sql`).
-6.  Click START to begin the dump process. The SQL file with the name you gave it will be saved in the location you specified.
+3.  Go to `Tools` > `Dump Database`. This will open the database dump configuration window.
+4.  Select the specific database that contains the tables you want to export. Check the boxes next to the tables you wish to include in the export.
+5.  Choose the output folder where you want the SQL file to be saved. Enter a name for the file in the File Name Pattern field (e.g. `DBeaver_export_dump.sql`).
+6.  Click START to begin the dump process. The SQL file will be saved with the name you provided in the specified location.
 7.  When the MySQL dump progress is over (you´ll get a message like : "Task 'MySQL dump' finished at Fri Sep 27 17:42:02 CEST 2024"), close the configuration window manually and confirm that the file exists in the desired location.
 
 **Option B: Using the Terminal**
@@ -39,12 +39,11 @@ Here's a step-by-step guide on how you can achieve this:
 mysqldump -u root -p the_database_name > database_dump_name.sql
 
 /*
-Replace "the_database_name" with the name of the database you chose to dump,
-and "database_dump_name" with the desired name for your dump file.
+Replace `the_database_name` with the name of the database you want to dump, and `database_dump_name` with the desired name for your dump file.
 */
 ```
 
-4.  This will create an SQL file (e.g. above we used `database_dump_name.sql`) in the root directory where the core files of your project are stored. This file contains all the SQL commands necessary to recreate the original database, including its structure and data.
+4.  This command will create an SQL file (e.g.`database_dump_name.sql`) in the root directory where the core files of your project are stored. This file contains all the SQL commands necessary to recreate the original database, including its structure and data.
 
 **II. Import the Dump into a Local Database:**
 
@@ -69,7 +68,7 @@ and it will appear in your MySQL databases. You can choose any name you prefer f
 
 **Option A. If You Used DBeaver to Create the Dump:**
 
-- Import the SQL file (e.g. `DBeaver_export_dump.sql`) by running:
+- Import the saved SQL file (e.g. `DBeaver_export_dump.sql`) by running:
 
 ```bash
 mysql -u root -p local_database_dump_name < DBeaver_export_dump.sql
@@ -77,10 +76,17 @@ mysql -u root -p local_database_dump_name < DBeaver_export_dump.sql
 
 **Option B. If You Used the Terminal to Create the Dump:**
 
-- Import the dump file (above we used `database_dump_name.sql`) by running:
+- Import the dump file (e.g.`database_dump_name.sql`) by running:
 
 ```bash
 mysql -u root -p local_database_dump_name < database_dump_name.sql
+```
+
+Note: If you don’t want to save the dump file in the current working directory (the directory you're in when you run the command), provide the full path to the file, like this:
+
+```bash
+mysql -u root -p local_database_dump_name < /path/to/directory/database_dump_name.sql
+
 ```
 
 **III. Create a New Connection in DBeaver:**
@@ -100,17 +106,15 @@ Password: YOUR_MySQL_PASSWORD;
 
 ```js
 /*
-Replace "YOUR_MySQL_PASSWORD" with your own MySQL password. You can choose whether to save your password for future connections.
-
-If you don’t want to save the dump file in the current working directory (the directory you're in when you run the command), you must provide the full path as a second parameter, like "/path/to/directory/database_dump_name.sql".
+Replace "YOUR_MySQL_PASSWORD" with your actual MySQL password. You can choose whether to save your password for future connections.
 
 */
 ```
 
-(Note: Port 3306 is the default port for MySQL)
-
 5. Click `Test Connection` to ensure everything is set up correctly.
 6. Click `Finish` to save the connection.
+
+(Note: Port 3306 is the default port for MySQL)
 
 ### **The `.env` File**
 
