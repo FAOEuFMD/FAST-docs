@@ -19,101 +19,69 @@ Here's a step-by-step guide on how you can achieve this:
 
 **I. Create the Database Dump:**
 
-**Option A: Using DBeaver**
-
-1.  Open DBeaver and connect to the database you want to export.
+1.  Open DBeaver and connect to the database hosted on Amazon Web Services (AWS).
 2.  From the list in `Databases`, right-click on the database you want to dump.
 3.  Go to `Tools` > `Dump Database`. This will open the database dump configuration window.
-4.  Select the specific database that contains the tables you want to export. Check the boxes next to the tables you wish to include in the export.
-5.  Choose the output folder where you want the SQL file to be saved and enter a name for the file in the File Name Pattern field (e.g. `DBeaver_export_dump.sql`).
-6.  Click START to begin the dump process. The SQL file will be saved with the name you provided in the specified location.
-7.  When the MySQL dump progress is over (you´ll get a message like : "Task 'MySQL dump' finished at Fri Sep 27 17:42:02 CEST 2024"), close the configuration window manually and confirm that the file exists in the desired location.
+4.  Select the specific database that contains the tables you want to export. Check the boxes next to the tables you wish to include in the export and click on `Next >`.
+5.  Choose the folder where you want the SQL file to be saved (e.g., your Desktop).
+6.  In the File Name Pattern field, enter a name for your SQL file (e.g., `DBeaver_dump.sql`).
+7.  Click `START` to begin the dump process. The SQL file will be saved with the name you provided in the chosen location.
+8.  Once the MySQL dump is finished (you’ll see a message like: "Task 'MySQL dump' finished at Fri Sep 27 17:42:02 CEST 2024"), manually close the configuration window and confirm the file exists in the specified location.
 
-**Option B: Using the Terminal**
-
-1.  Open your terminal.
-2.  Use the `cd` command to navigate into your project folder
-3.  Run the following command:
-
-```sql
-mysqldump -u root -p the_database_name > database_dump_name.sql
-
-/*
-Replace `the_database_name` with the name of the database you want to dump, and `database_dump_name` with the desired name for your dump file.
-*/
-```
-
-4.  This command will create an SQL file (e.g.`database_dump_name.sql`) in the root directory where the core files of your project are stored. This file contains all the SQL commands necessary to recreate the original database, including its structure and data.
+\*\*_Note_:
+If the process fails and the SQL file is not saved in the specified location, request the file from the team and proceed with the next steps.
 
 **II. Import the Dump into a Local Database:**
 
 **1. Create a New Local Database:**
 
-- Open your terminal.
+- Open your terminal and navigate to your project’s repository by using the `cd` command:
+  `cd /path/to/your/project/repository`
+
 - Log in to MySQL with the command: `mysql -u root -p`
 - Create a new database by running:
 
 ```sql
-  CREATE DATABASE local_database_dump_name;
-
-  /*
-Replace `local_database_dump_name` with the name you want to assign to the new database. This name will appear in your MySQL databases, and you can choose any name you prefer.
-*/
+  CREATE DATABASE local_database_name;
 ```
+
+_Replace `local_database_name` with the desired name for your new database. This will be the name that appears in your MySQL database list_.
 
 - Exit the MySQL client by typing: `EXIT;`
 
 **2. Import the Dump into the New Local Database:**
 
-**Option A. If You Used DBeaver to Create the Dump:**
-
-- Import the saved SQL file (e.g. `DBeaver_export_dump.sql`) by running:
+- Import the saved SQL file (e.g., `DBeaver_dump.sql`) by running the following command:
 
 ```bash
-mysql -u root -p local_database_dump_name < DBeaver_export_dump.sql
+mysql -u root -p local_database_name < /path/to/directory/DBeaver_dump.sql
 ```
 
-**Option B. If You Used the Terminal to Create the Dump:**
+_Replace `/path/to/directory/` with the full path to where the SQL file is located. For example_:
 
-- Import the dump file (e.g.`database_dump_name.sql`) by running:
-
-```bash
-mysql -u root -p local_database_dump_name < database_dump_name.sql
 ```
-
-Note: If you don’t want to save the dump file in the current working directory (the directory you're in when you run the command), provide the full path to the file, like this:
-
-```bash
-mysql -u root -p local_database_dump_name < /path/to/directory/database_dump_name.sql
-
+mysql -u root -p local_database_name < /Users/yourname/Desktop/DBeaver_dump.sql
 ```
 
 **III. Create a New Connection in DBeaver:**
 
 1.  Open DBeaver.
 2.  Go to `Database` > `New Database Connection`.
-3.  Select `MySQL` from the list.
-4.  Fill in the connection details
+3.  Select `MySQL` from the list of database types.
+4.  Fill in the connection details as follows:
 
 ```bash
 Server Host: localhost
-Port: 3306;
-Database: local_database_dump_name;
-Username: root;
-Password: YOUR_MySQL_PASSWORD;
+Port: 3306
+Database: local_database_name (the name in the MySQL database list)
+Username: root
+Password: YOUR_MySQL_PASSWORD
 ```
 
-```js
-/*
-Replace `YOUR_MySQL_PASSWORD` with your actual MySQL password. You can choose whether to save your password for future connections.
-
-*/
-```
+_Replace `YOUR_MySQL_PASSWORD` with your actual MySQL password. You can choose whether to save your password for future connections_.
 
 5. Click `Test Connection` to ensure everything is set up correctly.
 6. Click `Finish` to save the connection.
-
-Note: Port 3306 is the default port for MySQL.
 
 ### **The `.env` File**
 
@@ -125,22 +93,24 @@ When connecting to the dump database, ensure that the database connection in you
 
 ```bash
 DB_HOST=localhost
-DB_NAME=local_database_dump_name;
+DB_NAME=local_database_name
 DB_PASS=YOUR_MySQL_PASSWORD
 ```
 
 **Switching Between Databases in DBeaver**
 
-To switch between the original database and the dump database in DBeaver, you can maintain separate settings for each connection (e.g., one for the original database and one for the local dump database).
+To switch between databases, simply comment out the settings for the database you're not using in the .env file by adding a `#` at the beginning of the relevant lines.
 
-Comment out the settings for the database you're not using by adding # at the beginning of those lines.
+Reverting to the original AWS database:
 
-If you need to revert to the original database:
-
-1. Disconnect from the current database in DBeaver.
-2. Connect to the original database in DBeaver.
-3. Open the .env file and uncomment the relevant settings for the original AWS connection (remember to comment out the dump database settings).
+1. Disconnect from the local dump database in DBeaver.
+2. Connect to the original AWS database.
+3. Open the .env file and uncomment the AWS database settings, while commenting out the dump database settings.
 
 Before testing your connection and running your code, confirm that you're connected to the correct database. Look for the green tick mark next to the database name in DBeaver to ensure the connection is active and correct.
 
 ---
+
+```
+
+```
