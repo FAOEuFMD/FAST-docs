@@ -10,7 +10,7 @@ https://milestones-dashboard-staging.onrender.com/
 # ESLint Configuration
 
 For production applications, it's recommended to enable type-aware lint rules. Update the ESLint configuration as follows:
-
+```bash
 export default {
   parserOptions: {
     ecmaVersion: 'latest',
@@ -25,4 +25,4 @@ export default {
     'plugin:react/jsx-runtime'
   ]
 }
-
+```

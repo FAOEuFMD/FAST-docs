@@ -24,9 +24,9 @@ A dashboard that allows user to visualise data.
 
 ## About Learning Path AI Recommender
 
-## About Outputs & Milestones
+## About Targets Dashboard
 
-An open-source dashboard that tracks the completion of yearly EuFMD Program Targets until the year 2027.
+A web app dashboard that tracks the completion of yearly EuFMD Program Targets until the year 2027.
 
 ## About Recommender System
 
