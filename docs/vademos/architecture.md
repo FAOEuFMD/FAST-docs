@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Architecture Overview
 
-What is the app built on?
+VADEMOS is build on a REACT Framework 
 
 ## Backend
 
