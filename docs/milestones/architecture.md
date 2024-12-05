@@ -61,3 +61,10 @@ Built with React and TypeScript, featuring:
 - Modern UI with Tailwind CSS
 - React Router for navigation
 - Plotly.js for data visualisation
+
+### API Endpoints
+
+- GET /targets: Fetch all targets
+- POST /targets: Create a new target
+- PUT /targets/`:id`: Update an existing target
+- DELETE /targets/`:id`: Delete a target
