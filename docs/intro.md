@@ -12,6 +12,14 @@ This documentation is a work in progress.
 
 Feel free to contribute over at [EuFMD FAST docs](https://github.com/FAOEuFMD/FAST-docs).
 
+## About the EuFMD Program
+
+The European Commission for the Control of Foot-and-Mouth Disease (EuFMD), established in 1954, is dedicated to combating foot-and-mouth disease (FMD) across Europe. Operating under the Food and Agriculture Organization of the United Nations, EuFMD collaborates with Member Nations and European neighbors to enhance preparedness and implement sustainable control programs. It also supports the global strategy for the progressive control of FMD and similar transboundary animal diseases (FAST) through partnerships with the European Commission’s DG-SANTE, the FAO, and the World Organisation for Animal Health.
+
+The new program started in September 2023 and will run until 2027.
+
+![program](/img/EuFMD_Program.jpg)
+
 ## About DB Manager
 
 A user interface that allows users to input and extract data.
@@ -24,7 +32,7 @@ A dashboard that allows user to visualise data.
 
 ## About Learning Path AI Recommender
 
-## About Targets Dashboard
+## About Milestones Dashboard
 
 A web app dashboard that tracks the completion of yearly EuFMD Program Targets until the year 2027.
 
