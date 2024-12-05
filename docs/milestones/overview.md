@@ -6,11 +6,11 @@ sidebar_position: 1
 
 The Milestones Dashboard is an open-source application designed to track the completion of yearly EuFMD Program Targets until 2027. It provides a visual interface for monitoring progress across various focus objectives, key areas, and expected results.
 
-# Target Audience
+## Target Audience
 
 The dashboard is built for internal stakeholders to track the progress of the EuFMD Program achieving its targets.
 
-# Features
+## Features
 
 1. Tracking of EuFMD Program targets
 2. Interactive dashboard interface
