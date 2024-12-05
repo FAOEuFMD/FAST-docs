@@ -85,7 +85,7 @@ Create a `.env` file in the root directory of the project and fill in the necess
 
 5. Ensure that the migration was successful by connecting to your newly created database and checking that the tables contain the exported data.
 
-### 7. Development
+#### 7. Development
 
 - Run `npm start` in the project directory to start the Express server on port 5000
 - Type `cd client` in a new terminal and run `npm run dev` to start the client server in development mode with hot reloading in port 5173.
