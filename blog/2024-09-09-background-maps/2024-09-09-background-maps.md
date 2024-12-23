@@ -53,7 +53,19 @@ appropriate fields (see Figure, right)
 10. In the basemap prompt: select your preferred Clear Map flavor that will be added as a background 
 to your excel geo-enabled data
 
-**LEAFLET**
+
+**FOLIUM IN PYTHON**
+Correct apy call to see all layers:
+https://geoservices.un.org/arcgis/rest/services/ClearMap_Topo/MapServer?f=json
+
+Correct apy call for country shapes example: 
+https://geoservices.un.org/arcgis/rest/services/ClearMap_WebTopo/MapServer/109/query?where=ISO3CD%20IN%20(%27EGY%27,%27JOR%27,%27LBN%27,%27PSE%27,%27LBY%27,%27TUR%27,%27AZE%27,%27ARM%27,%27GEO%27,%27IRQ%27,%27IRN%27,%27PAK%27,%27MRT%27,%27DZA%27,%27MAR%27,%27TUN%27,%27SYR%27,%27SDN%27,%27ISR%27,%27AFG%27)&outFields=ISO3CD&returnGeometry=true&f=geojson
+
+Correct API call for admin regions shapes example:
+https://geoservices.un.org/arcgis/rest/services/ClearMap_WebTopo/MapServer/110/query?where=CNTY%20IN%20(%27KEN%27)&outFields=CNTY,ADM1_Name&returnGeometry=true&f=geojson
+
+
+**LEAFLET for developers**
 
 ***Using Leaflet, copy the sample code below in text editor and save it 
 as html file, or use the url as below:***

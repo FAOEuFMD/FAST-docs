@@ -10,12 +10,12 @@ VADEMOS is build on a REACT Framework
 
   Database Prep
 Access the MySQL interface in your terminal by running mysql -u root -p
-Create a new database called facebook: create database project
-Add a .env file to the project folder of this repository containing the MySQL authentication information for MySQL user like this:
+Create a new database called VADEMOS and use the sql dump to populate it (request it to your team leader)
+Add a .env file to the project folder of this repository containing the MySQL authentication information example:
   DB_HOST=localhost
-  DB_USER=root
-  DB_NAME=vademos
-  DB_PASS=YOURPASSWORD
+  DB_USER='your_user_name'
+  DB_NAME=VADEMOS
+  DB_PASS='your_mysql_password'
 
 .env File:
 Stores sensitive information (e.g., database credentials, API keys).
@@ -98,17 +98,10 @@ In another terminal, do cd client and run npm run dev to start the client in dev
 Dependencies
 Run npm install in project directory. This will install server-related dependencies such as express.
 cd client and run npm install. This will install client dependencies (React).
-Database Prep
-Access the MySQL interface in your terminal by running mysql -u root -p
-Create a new database called facebook: create database project
-Add a .env file to the project folder of this repository containing the MySQL authentication information for MySQL user like this:
-  DB_HOST=localhost
-  DB_USER=root
-  DB_NAME=vademos
-  DB_PASS=YOURPASSWORD
+
 Run npm run migrate in the project folder of this repository, in a new terminal window. This will create two tables called 'users' and 'comments' in your database.
 
-Make sure you understand how the users table is constructed. In your MySQL console, you can run use project; and then describe users; to see the structure of the users table ( the same is about other tables).
+
 
 Development
 Run npm start in project directory to start the Express server on port 3000
