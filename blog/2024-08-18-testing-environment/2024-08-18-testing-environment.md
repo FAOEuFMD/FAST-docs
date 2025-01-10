@@ -63,6 +63,14 @@ _Replace `/path/to/directory/` with the full path to where the SQL file is locat
 mysql -u root -p local_database_name < /Users/yourname/Desktop/DBeaver_dump.sql
 ```
 
+To check if it has been succesfull:
+```sql
+  SHOW DATABASES;
+  USE you_database_name;
+  SHOW TABLES;
+```
+
+
 **III. Create a New Connection in DBeaver:**
 
 1.  Open DBeaver.
