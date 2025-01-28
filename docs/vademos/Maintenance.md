@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# VADEMOS Maintenance Plan: A Guide for Data Scientists  
+# Maintenance Plan 
 
 Maintaining the VADEMOS tool requires attention to both **data updates** and **application/server upkeep**. Below is a structured overview of the key maintenance activities:  
 
