@@ -8,7 +8,7 @@ sidebar_position: 4
 
 - Deployment is handled through Render
 - Connected to AWS production database
-- Staging environment available for testing before production deployment accessible at the link [here](https://milestones-dashboard-staging.onrender.com)
+- Staging environment available for testing before production deployment accessible at the link [here](https://eufmd-targets.onrender.com/)
 
 ### Production:
 

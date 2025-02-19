@@ -17,7 +17,7 @@ The dashboard is built for internal stakeholders, including program managers and
 
 1. Tracking of EuFMD Program targets
 2. Interactive dashboard interface
-3. Visual representation of milestone progress
+3. Visual representation of targets progress
 4. Data entry for manual targets
 
 ## Data Sources
