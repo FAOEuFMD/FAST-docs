@@ -70,12 +70,14 @@ Unit and integration tests.
 
 ## API
 
-| Description                                  | Endpoint         | Method | Params | Body | Return                                                                                                                                                                                                         |
-| -------------------------------------------- | ---------------- | ------ | ------ | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
-| Add list of different non moodle courses     | /add             | POST   | -      | -    | array of course objects: `[{ "id": int, "shortname": varchar, "start_date": datetime, "language": varchar, "format": varchar, "main_topic": varchar, "level": int, "edition": int, "duration":int, }, ...]`    | `   |
-| GET list of all non moodle courses           | /getAllNMCourses | GET    | -      | -    | array of course objects: `[{ "id": int, "shortname": varchar, "start_date": datetime, "language": varchar, "format": varchar, "main_topic": varchar, "level": int, "edition": int, "duration":int, }, ...]`    |
-| GET column shortname from non_moodle_courses | /getNMCourses    | GET    | -      | -    | array of strings: `["Course1", ...]`                                                                                                                                                                           |
-| Add list of different non moodle enrolments  | /addEnrolment    | POST   | -      | -    | array of enrolments objects: `[{ "id": int, "course_shortname": varchar, "user_fullname": varchar, "email": varchar, "country": varchar, "completion_date": datetime, "progress": int, "status": int, }, ...]` |
+## API
+
+| Description                                  | Endpoint         | Method | Params | Body | Return                                                                                                                                                                                                       |
+| -------------------------------------------- | ---------------- | ------ | ------ | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Add list of different non moodle courses     | /add             | POST   | -      | -    | array of course objects: `[{ "id": int, "shortname": varchar, "start_date": datetime, "language": varchar, "format": varchar, "main_topic": varchar, "level": int, "edition": int, "duration": int }, ...]`  |
+| GET list of all non moodle courses           | /getAllNMCourses | GET    | -      | -    | array of course objects: `[{ "id": int, "shortname": varchar, "start_date": datetime, "language": varchar, "format": varchar, "main_topic": varchar, "level": int, "edition": int, "duration": int }, ...]`  |
+| GET column shortname from non_moodle_courses | /getNMCourses    | GET    | -      | -    | array of strings: `["Course1", ...]`                                                                                                                                                                         |
+| Add list of different non moodle enrolments  | /addEnrolment    | POST   | -      | -    | array of enrolment objects: `[{ "id": int, "course_shortname": varchar, "user_fullname": varchar, "email": varchar, "country": varchar, "completion_date": datetime, "progress": int, "status": int }, ...]` |
 
 ## Frontend
 
