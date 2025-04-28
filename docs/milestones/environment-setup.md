@@ -73,7 +73,7 @@ Create a `.env` file in the root directory of the project and fill in the necess
   cp .env.example .env
 ```
 
-2. Create a folder in your root named dump-files. Export a MySQL dump file from the production database and move it to your dump-files folder.
+2. Create a folder in your root named dump-files. Export a MySQL dump file from the production database (or request a current dump file from the team lead) and move it to your dump-files folder.
 
 3. Connect to MySQL and create a new local database.
 
@@ -87,5 +87,6 @@ Create a `.env` file in the root directory of the project and fill in the necess
 
 #### 7. Development
 
-- Run `npm start` in the project directory to start the Express server on port 5000
+- For development, run `npm run dev` in the project directory to start the Express server on port 5000 using nodemon. Nodemon will watch the server for changes, so the server updates without having to restart each time a change is made.
+- For production, run `npm start` to start the server on port 5000 using node.
 - Type `cd client` in a new terminal and run `npm run dev` to start the client server in development mode with hot reloading in port 5173.
