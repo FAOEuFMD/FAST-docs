@@ -89,10 +89,10 @@ For example, if a new table has been added and you're developing a feature that 
 To connect to our staging database, add the following credentials to your `.env` file. These credentials will also allow you to connect to the production database named `db_tompilot`.
 
 ```
-DB_HOST2="eufmd-database-1.cqodkl4vazie.eu-north-1.rds.amazonaws.com"
-DB_USER2=root
+DB_HOST2="request_it"
+DB_USER2="request_it"
 DB_NAME2=staging_db_tompilot
-DB_PASS2=YOUR_PASSWORD
+DB_PASS2="request_it"
 ```
 
 ## Frontend
