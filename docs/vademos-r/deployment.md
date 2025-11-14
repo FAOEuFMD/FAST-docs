@@ -73,3 +73,25 @@ Due to memory limitations on the free tier of **shinyapps.io**, we opted to depl
 ---
 
 This setup allows you to bypass the memory restrictions of shinyapps.io and gives you full control over scaling and updates.
+
+
+## How to Update the VADEMOS Shiny App on AWS Lightsail
+
+To update the deployed Shiny app, follow these steps:
+
+### 1. Prepare Your Local Changes
+Ensure your updated app files are ready on your local machine.
+
+### 2. Connect to Lightsail Using Git Bash
+Open **Git Bash** and connect via SSH using your `.pem` key:
+```bash
+ssh -i "/path/to/LightsailKey.pem" ubuntu@<your-lightsail-public-ip>
+Replace /path/to/LightsailKey.pem with the actual path to your key file.
+```
+### 3.3. Upload Updated Files with SCP
+From Git Bash, run:
+```bash
+scp -i "/path/to/LightsailKey.pem" -r "/local/path/to/VADEMOS" ubuntu@<your-lightsail-public-ip>:/srv/shiny-server/VADEMOS
+```
+
+This will overwrite the existing app files with your updated version.
